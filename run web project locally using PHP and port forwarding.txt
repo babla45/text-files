@@ -1,0 +1,11 @@
+Go to the folder where you have your project files and want to open your webserver for that folder. Open cmd on that folder.
+Make sure that you have PHP installed on your computer and the path is set successfully.
+type:
+php -S localhost:4545
+here 45 is a port number.
+
+Theh server will open on that folder for the specified port.
+Go to a web browser and type localhost:4545 to view the webpage
+
+
+Open vs code to forward that port.

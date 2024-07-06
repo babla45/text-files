@@ -1,0 +1,45 @@
+>>robocopy "source path" "destination path" /sec /move /e
+
+
+>>mklink "source path" "destination path" /j
+
+
+
+
+1) Robocopy:
+
+robocopy is a robust file copy command-line tool available in Windows.
+"source" and "destination" are placeholders for the paths of the source directory 
+and the destination directory, respectively.
+/sec copies the security attributes of files and directories.
+/move moves files and directories (deletes them from the source after copying).
+/e copies subdirectories, including empty ones.
+
+the command robocopy "source" "destination" /sec /move /e will copy all files and
+directories (including their security attributes) from the source to the destination,
+move them (delete from source after copying), and include all subdirectories.
+
+
+
+
+2.Mklink:
+
+mklink is a command used to create symbolic links or junction points in Windows.
+"source" and "destination" are placeholders for the paths of the symbolic link and
+the target directory, respectively.
+/j creates a directory junction (symbolic link for directories).
+So, the command mklink "source" "destination" /j will create a symbolic
+link (junction point) at the specified source location, pointing to the destination directory.
+
+
+
+
+
+
+To put it into context:
+
+The robocopy command will copy/move files and directories from one location to another.
+The mklink command will create a symbolic link (junction point) at a specified location,
+pointing to another directory.
+By combining these commands, you can effectively move files and directories to a different
+location while leaving a symbolic link behind to maintain compatibility with existing paths or references.

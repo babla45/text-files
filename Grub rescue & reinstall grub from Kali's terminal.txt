@@ -1,0 +1,34 @@
+(1)GRUB RESCUE:
+
+If the following command shows file:
+>>ls
+>>ls (hd0,gpt7)/grub
+
+Then type:
+
+>>set prefix=(hd0,gpt7)/grub
+>>insmod normal
+>>normal
+
+
+
+
+
+(2)
+Reinstall grub using kali Linux terminal:
+Open Kali's terminal and type:
+
+>>lsblk
+
+Fount the root partition (not /boot partition) with "/" indicator and note the number
+
+Then type:
+
+
+>>sudo grub-install /dev/sda6
+
+here sda6 is the root file system "/"
+
+>>sudo update-grub
+>>sudo reboot
+
