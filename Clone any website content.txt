@@ -1,0 +1,25 @@
+
+wget --mirror --convert-links --adjust-extension --page-requisites --no-parent http://example.com
+
+
+### Breakdown:
+1. **`--mirror`**: This option enables mirroring, which is similar to using `-r` (recursive download) but with other settings like timestamping, infinite recursion depth, and preserving symbolic links.
+   
+2. **`--convert-links`**: Converts the links in the downloaded files to make them suitable for local viewing. For example, it will change absolute URLs (like `http://example.com/page.html`) to relative URLs, so you can view the website properly on your local machine.
+
+3. **`--adjust-extension`**: Ensures that the downloaded files have the appropriate extensions (e.g., `.html`) so that they can be opened locally in a web browser.
+
+4. **`--page-requisites`**: Downloads all files necessary to properly display the web pages, such as images, CSS files, JavaScript files, etc.
+
+5. **`--no-parent`**: Prevents `wget` from going to parent directories of the specified site. This ensures you only download from `http://example.com` and not from directories higher up.
+
+6. **`http://example.com`**: The target website URL. Replace this with the actual website you want to clone.
+
+### Full Example Usage
+If you wanted to download the entire contents of `http://example.com`, you'd open **Command Prompt** (or any terminal window) and run:
+
+wget --mirror --convert-links --adjust-extension --page-requisites --no-parent http://example.com
+
+
+### Notes:
+- This command is intended for static websites. For dynamic websites (those that rely on databases or server-side scripts), this will only download the static portions (HTML, CSS, JS).
