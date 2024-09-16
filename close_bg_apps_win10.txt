@@ -1,0 +1,8 @@
+@echo off
+echo Killing unnecessary background apps...
+
+:: Runs taskkill with high priority and wait for it to complete
+start /high /B /wait "" cmd /c "taskkill /F /IM Service.exe /IM crosvm.exe /IM msedge.exe /IM Acrobat.exe /IM TeraBox.exe /IM TeraBoxWebService.exe /IM WhatsApp.exe /IM ONENOTEM.EXE /IM igfxTray.exe /IM POWERPNT.EXE"
+
+echo ******All unnecessary background apps have been terminated.*****
+pause
